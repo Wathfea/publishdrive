@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book name="Book1.epub">
+        <creator>Ádám Rendes</creator>
+        <title>Sample book</title>
+        <publisher>PublishDrive</publisher>
+        <validationResult>Validating using EPUB version 2.0.1 rules.
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(11,447): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(13,695): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(15,704): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(15,861): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(17,622): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(19,732): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(21,528): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(21,903): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(23,671): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(25,561): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(27,367): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(29,62): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(29,558): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(31,839): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(33,633): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(35,71): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(35,867): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(37,364): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(39,708): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(41,171): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(41,386): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(43,697): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0004.xhtml(47,8): Error while parsing file:
+            element "body" incomplete; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(11,724): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(13,584): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(15,510): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(17,25): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(17,436): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(19,593): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(21,399): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(23,412): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(25,221): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(25,363): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(27,812): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0002.xhtml(28,8): Error while parsing file:
+            element "body" incomplete; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(11,536): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(13,495): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(15,605): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(17,207): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(17,365): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(19,485): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(21,669): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(23,557): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(25,167): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(25,523): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(27,680): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(29,569): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(31,434): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(31,622): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(33,571): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(35,701): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(37,579): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(37,875): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(39,535): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(41,1011): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(43,197): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(43,863): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(45,874): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(47,502): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(47,866): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(49,584): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(51,331): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(53,338): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(55,419): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(55,553): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(57,680): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(59,444): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(61,523): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(63,255): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(63,905): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(65,622): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(67,770): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(67,874): Error while parsing
+            file: text not allowed here; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+            ERROR(RSC-005): ./public/epub_files/Book1.epub/OEBPS/Text/Section0003.xhtml(68,8): Error while parsing file:
+            element "body" incomplete; expected element "address", "blockquote", "del", "div", "dl", "h1", "h2", "h3",
+            "h4", "h5", "h6", "hr", "ins", "noscript", "ns:svg", "ol", "p", "pre", "script", "table" or "ul" (with
+            xmlns:ns="http://www.w3.org/2000/svg")
+
+            Check finished with errors
+            Messages: 0 fatals / 74 errors / 0 warnings / 0 infos
+
+            EPUBCheck completed
+        </validationResult>
+    </book>
+    <book name="Book2.epub">
+        <creator>PublishDrive Rendi</creator>
+        <title>Unknown</title>
+        <publisher/>
+        <validationResult>Validating using EPUB version 2.0.1 rules.
+            No errors or warnings detected.
+            Messages: 0 fatals / 0 errors / 0 warnings / 0 infos
+
+            EPUBCheck completed
+        </validationResult>
+    </book>
+    <book name="Book3.epub">
+        <creator>Jules Verne</creator>
+        <title>The Mysterious Island</title>
+        <publisher>Booklassic</publisher>
+        <validationResult>Validating using EPUB version 2.0.1 rules.
+            No errors or warnings detected.
+            Messages: 0 fatals / 0 errors / 0 warnings / 0 infos
+
+            EPUBCheck completed
+        </validationResult>
+    </book>
+    <book name="Book4.epub">
+        <creator>Edgar Allan Poe</creator>
+        <title>The Tell-Tale Heart</title>
+        <publisher>Booklassic</publisher>
+        <validationResult>Validating using EPUB version 2.0.1 rules.
+            No errors or warnings detected.
+            Messages: 0 fatals / 0 errors / 0 warnings / 0 infos
+
+            EPUBCheck completed
+        </validationResult>
+    </book>
+</books>
