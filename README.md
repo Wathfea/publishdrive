@@ -1,66 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Feladat 1 - BE
+- Az env fileban töltsük ki a szükséges extra paramétereket!
+  ```dotenv
+  EPUB_CHECKER_JAR="utils/epubcheck-5.1.0/epubcheck.jar"
+  JAVA_PATH="/usr/bin/java"
+  ```
+  
+- Első lépésben töltsük le a szükséges epub fileokat a következő paranccsal:
+```shell
+php artisan app:download-epubs 
+```
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+- Második lépésben gyűjtsük ki az adatokat az epub fileokból a következő paranccsal:
+```shell
+php artisan app:collect-epubs-metadata
+```
 
-## About Laravel
+- Harmadik lépésben validáljuk a fileokat és írjuk be a validációs eredmények a metadata fileba:
+```shell
+php artisan app:validate-epubs
+```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Feladat 2 - FE
+- `npm install && npm run dev` futtatása
+- Oldal betöltése a `/` rooton például: http://publishdrive.test
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Feladat 3 - DB
+- Számítsd ki, hogy az egyes években mennyi volt a teljes forgalom forintban mérve (év,
+forgalom_HUF).
+Az egyes eladások értékét mindig az aktuális dátum szerinti átlagos havi árfolyam alapján kell kiszámolni. Sajnos azonban néha előfordul, hogy egy hónapra nincs meg az árfolyamunk. Ilyenkor – de csak ilyenkor – használhatjuk az adott deviza alapértelmezett árfolyamát.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```sql
+SELECT
+    YEAR(e.datum) AS ev,
+    SUM(
+    CASE
+    WHEN af.arfolyam IS NOT NULL THEN e.mennyiseg * e.ar / af.arfolyam
+    ELSE e.mennyiseg * e.ar / d.alap_arfolyam
+    END
+    ) AS forgalom_HUF
+FROM eladas e
+    INNER JOIN deviza d ON e.deviza_id = d.id
+    LEFT JOIN arfolyam af ON e.deviza_id = af.deviza_id
+    AND YEAR(e.datum) = af.ev
+    AND MONTH(e.datum) = af.ho
+WHERE d.nev = 'HUF'
+GROUP BY YEAR(e.datum)
+ORDER BY YEAR(e.datum);
+```
 
-## Learning Laravel
+- Az előző lekérdezést egészíts ki még egy oszloppal (forgalom_EUR), ami azt is mutatja, hogy a forintban kiszámolt forgalmi értékek EUR-ban mit jelentenek (az EUR árfolyamát is lehetőleg a tranzakció dátum alapján kell megállapítani).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```sql
+SELECT
+    YEAR(e.datum) AS ev,
+    SUM(
+    CASE
+    WHEN af.arfolyam IS NOT NULL THEN e.mennyiseg * e.ar / af.arfolyam
+    ELSE e.mennyiseg * e.ar / d.alap_arfolyam
+    END
+    ) AS forgalom_HUF,
+    ROUND(SUM(
+    CASE
+    WHEN af.arfolyam IS NOT NULL THEN e.mennyiseg * e.ar / af.arfolyam
+    ELSE e.mennyiseg * e.ar / d.alap_arfolyam
+    END
+    ) / (
+    SELECT MAX(arfolyam)
+    FROM arfolyam
+    WHERE deviza_id = 2
+    AND (YEAR(e.datum) = ev OR (YEAR(e.datum) NOT IN (SELECT DISTINCT ev FROM arfolyam)))
+    AND MONTH(e.datum) = MONTH(e.datum)
+    ), 2) AS forgalom_EUR
+FROM eladas e
+    INNER JOIN deviza d ON e.deviza_id = d.id
+    LEFT JOIN arfolyam af ON e.deviza_id = af.deviza_id
+    AND YEAR(e.datum) = af.ev
+    AND MONTH(e.datum) = af.ho
+WHERE d.nev = 'HUF'
+GROUP BY YEAR(e.datum)
+ORDER BY YEAR(e.datum);
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
