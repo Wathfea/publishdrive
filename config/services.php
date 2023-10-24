@@ -32,6 +32,7 @@ return [
     ],
 
     'epubcheck'  => [
-        'jar_location' => env('EPUB_CHECKER_JAR', '')
+        'java_path' => env('JAVA_PATH', ''),
+        'jar_location' => env('EPUB_CHECKER_JAR', ''),
     ]
 ];

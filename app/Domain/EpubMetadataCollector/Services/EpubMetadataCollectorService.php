@@ -4,6 +4,7 @@ namespace App\Domain\EpubMetadataCollector\Services;
 
 use App\Domain\EpubMetadataCollector\Services\Interfaces\EpubMetadataCollectorServiceInterface;
 use FilesystemIterator;
+use Illuminate\Support\Facades\File;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SimpleXMLElement;
@@ -36,58 +37,60 @@ class EpubMetadataCollectorService implements EpubMetadataCollectorServiceInterf
         $returnData = [];
         $tempDir = 'temp';
 
-        $directoryPath = public_path('epub_files');
+        $epubFilesDirectory = public_path('epub_files');
 
-        if (is_dir($directoryPath)) {
-            $files = array_diff(scandir($directoryPath), ['.', '..']); // Remove '.' and '..' entries
-
-            foreach ($files as $file) {
-                $filePath = $directoryPath . '/' . $file;
-                $destinationPath = $tempDir;
-
-                $zip = new ZipArchive();
-                if ($zip->open($filePath) === true) {
-                    $zip->extractTo($destinationPath);
-                    $zip->close();
-                } else {
-                    die('Failed to open the EPUB file.');
-                }
-
-                $infoFile = $destinationPath . '/META-INF/container.xml';
-                if (file_exists($infoFile)) {
-                    $infoContent = file_get_contents($infoFile);
-                    $xml = new SimpleXMLElement($infoContent);
-                    $metadataFilePath = (string) $xml->rootfiles->rootfile['full-path'];
-                    $metadataFile = $destinationPath . '/' . $metadataFilePath;
-
-                    if (file_exists($metadataFile)) {
-                        $metadataContent = file_get_contents($metadataFile);
-                        $xml = new SimpleXMLElement($metadataContent);
-                        $namespaces = $xml->getNamespaces(true); // Retrieve all namespaces
-                        $dc = $xml->metadata->children($namespaces['dc']); // Use the 'dc' namespace
-
-                        $metadata = [];
-                        // Extracting metadata fields
-                        foreach ($metadatas as $needle) {
-                            $metadata[$needle] = (string) $dc->{$needle};
-                        }
-
-                        $returnData[$file] = $metadata;
-
-                        // Clean up the temporary folder
-                        if (is_dir($destinationPath)) {
-                            $this->cleanUpTempFolder($destinationPath);
-                        }
-                    } else {
-                        die('Metadata file not found.');
-                    }
-                } else {
-                    die('Info file not found.');
-                }
-            }
-        } else {
-            echo 'The directory does not exist.';
+        if (!File::isDirectory($epubFilesDirectory)) {
+            throw new RuntimeException('Epub files directory is missing.');
         }
+
+        $files = array_diff(scandir($epubFilesDirectory), ['.', '..']); // Remove '.' and '..' entries
+
+        foreach ($files as $file) {
+            $filePath = $epubFilesDirectory.'/'.$file;
+            $destinationPath = $tempDir;
+
+            $zip = new ZipArchive();
+            if ($zip->open($filePath) === true) {
+                $zip->extractTo($destinationPath);
+                $zip->close();
+            } else {
+                die('Failed to open the EPUB file.');
+            }
+
+            $infoFile = $destinationPath.'/META-INF/container.xml';
+
+            if (!File::exists($infoFile)) {
+                throw new RuntimeException('Container XML does not exist.');
+            }
+
+            $infoContent = file_get_contents($infoFile);
+            $xml = new SimpleXMLElement($infoContent);
+            $metadataFilePath = (string) $xml->rootfiles->rootfile['full-path'];
+            $metadataFile = $destinationPath.'/'.$metadataFilePath;
+
+            if (!File::exists($metadataFile)) {
+                throw new RuntimeException('Metadata file does not exist.');
+            }
+
+            $metadataContent = file_get_contents($metadataFile);
+            $xml = new SimpleXMLElement($metadataContent);
+            $namespaces = $xml->getNamespaces(true); // Retrieve all namespaces
+            $dc = $xml->metadata->children($namespaces['dc']); // Use the 'dc' namespace
+
+            $metadata = [];
+            // Extracting metadata fields
+            foreach ($metadatas as $needle) {
+                $metadata[$needle] = (string) $dc->{$needle};
+            }
+
+            $returnData[$file] = $metadata;
+
+            // Clean up the temporary folder
+            if (is_dir($destinationPath)) {
+                $this->cleanUpTempFolder($destinationPath);
+            }
+        }
+
 
         return $returnData;
     }

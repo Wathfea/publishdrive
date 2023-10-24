@@ -1,5 +1,6 @@
 <?php
 
+use App\Domain\User\Controllers\Web\UserWebController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('app');
+})->name('application');
+
+Route::get('/proxy-users', [UserWebController::class, 'getRemoteData']);
