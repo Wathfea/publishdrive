@@ -59,18 +59,23 @@ SELECT
     ELSE e.mennyiseg * e.ar / d.alap_arfolyam
     END
     ) AS forgalom_HUF,
-    ROUND(SUM(
+    ROUND(
+    SUM(
     CASE
     WHEN af.arfolyam IS NOT NULL THEN e.mennyiseg * e.ar / af.arfolyam
     ELSE e.mennyiseg * e.ar / d.alap_arfolyam
     END
-    ) / (
-    SELECT MAX(arfolyam)
+    ) / COALESCE(
+    (SELECT arfolyam
     FROM arfolyam
     WHERE deviza_id = 2
-    AND (YEAR(e.datum) = ev OR (YEAR(e.datum) NOT IN (SELECT DISTINCT ev FROM arfolyam)))
+    AND YEAR(e.datum) = ev
     AND MONTH(e.datum) = MONTH(e.datum)
-    ), 2) AS forgalom_EUR
+    LIMIT 1
+    ),
+    (SELECT alap_arfolyam FROM deviza d2 WHERE d2.nev = 'EUR')
+    ), 2
+    ) AS forgalom_EUR
 FROM eladas e
     INNER JOIN deviza d ON e.deviza_id = d.id
     LEFT JOIN arfolyam af ON e.deviza_id = af.deviza_id
